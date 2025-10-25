@@ -18,7 +18,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
         {
             string? userInput = string.Empty;
             
-            while (userInput != "exit")
+            while (userInput != "exit 0")
             {
                 
                 Console.Write("$ ");
