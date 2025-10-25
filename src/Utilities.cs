@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,18 +9,40 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
 {
     internal class Utilities
     {
-        public static void Echo(string words)
+        public static void Echo(string[] words)
         {
-            string[] input = words.Split(' ');
-
-            if (input.Length > 1)
+            
+            if (words.Length > 0)
             {
-                Console.WriteLine(string.Join(" ", input.Skip(1)));
+                Console.WriteLine(string.Join(" ", words));
                 return;
             }
             Console.WriteLine("");
         }
-        
+
+        public static void Type(string[] cmd)
+        {
+            string message = " is a shell builtin";
+            switch (cmd[0])
+            {
+                case "echo":
+                    Console.WriteLine($"echo{message}");
+                    break;
+                case "exit":
+                    Console.WriteLine($"exit{message}");
+                    break;
+                case "type":
+                    Console.WriteLine($"type{message}");
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{cmd}: command not found");
+                    Console.ResetColor();
+                    break;
+            }
+           
+        }
+
 
     }
 }

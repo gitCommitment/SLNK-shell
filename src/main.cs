@@ -23,6 +23,9 @@ class Program
                     break;
                 case "exit":
                     return 0;
+                case "type":
+                    Utilities.Type(parseCmd[1..]);
+                    break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"{cmd}: command not found");
