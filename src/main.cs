@@ -2,7 +2,12 @@ class Program
 {
     static void Main()
     {
-    //TODO: Uncomment the code below to pass the first stage
          Console.Write("$ ");
+
+        userInput = Console.ReadLine();
+
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"{userInput}: command not found.");
+        Console.ResetColor();
     }
 }
