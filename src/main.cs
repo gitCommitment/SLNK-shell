@@ -2,12 +2,15 @@ class Program
 {
     static void Main()
     {
-         Console.Write("$ ");
+        while(true)
+        {
+             Console.Write("$ ");
 
-        string userInput = Console.ReadLine();
+            string userInput = Console.ReadLine();
 
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"{userInput}: command not found");
-        Console.ResetColor();
-    }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"{userInput}: command not found");
+            Console.ResetColor();
+        
+        }
 }
