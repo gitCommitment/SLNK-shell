@@ -19,7 +19,7 @@ class Program
             switch (parseCmd[0])
             {
                 case "echo":
-                    Utilities.Echo(cmd);
+                    Utilities.Echo(parseCmd[1..]);
                     break;
                 case "exit":
                     return 0;
