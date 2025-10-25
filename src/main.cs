@@ -7,7 +7,7 @@ class Program
         string userInput = Console.ReadLine();
 
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"{userInput}: command not found.");
+        Console.WriteLine($"{userInput}: command not found");
         Console.ResetColor();
     }
 }
