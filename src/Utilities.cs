@@ -16,14 +16,14 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
 
         public static void Prompt()
         {
-            string? userInput = string.Empty;
+            string? cmd;
             
             while (!Exit)
             {
-                
+
                 Console.Write("$ ");
-                userInput = Console.ReadLine();
-                if (userInput == "exit 0")
+                cmd = Console.ReadLine();
+                if (cmd == "exit 0")
                 {
                     Exit = true;
                     break;
@@ -31,7 +31,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{userInput}: command not found");
+                    Console.WriteLine($"{cmd}: command not found");
                     Console.ResetColor();
                 }
             }
