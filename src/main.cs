@@ -10,7 +10,7 @@ class Program
     {
         while (true)
         {
-            Console.WriteLine("$ ");
+            Console.Write("$ ");
             var cmd = Console.ReadLine();
 
             if (cmd == "exit 0")
