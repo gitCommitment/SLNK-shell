@@ -25,6 +25,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
                 userInput = Console.ReadLine();
                 if (userInput == "exit 0")
                 {
+                    Exit = true;
                     break;
                 }
                 else
