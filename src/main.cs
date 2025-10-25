@@ -1,16 +1,16 @@
 using SLNK_Shell.codecrafters_shell_csharp.src;
+using System.Security.Cryptography;
+using System.Net;
+using System.Net.Sockets;
 
 class Program
 {
     static int Main()
     {
         while (true)
-        {
-            string cmd;
-
+        {            
             Console.WriteLine("$ ");
-
-            cmd = Console.ReadLine();
+            var cmd = Console.ReadLine();
 
             if (cmd == "exit")
             {
