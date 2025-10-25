@@ -1,17 +1,14 @@
+using SLNK_Shell.codecrafters_shell_csharp.src;
+
 class Program
 {
     static void Main()
     {
-        while (true)
+        
+        do
         {
-            Console.Write("$ ");
-
-            string userInput = Console.ReadLine();
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{userInput}: command not found");
-            Console.ResetColor();
-
+            Utilities.Prompt(); 
         }
+        while (!Utilities.Exit);
     }
 }
