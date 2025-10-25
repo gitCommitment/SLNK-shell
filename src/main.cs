@@ -13,14 +13,15 @@ class Program
         { 
             Console.Write("$ ");
             var cmd = Console.ReadLine();
+            string[] parseCmd = cmd.Split(' ');
 
 
-            switch (cmd)
+            switch (parseCmd[0])
             {
                 case "echo":
                     Utilities.Echo(cmd);
                     break;
-                case "exit 0":
+                case "exit":
                     return 0;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
