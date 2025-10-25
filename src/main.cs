@@ -7,21 +7,30 @@ class Program
 {
     static int Main()
     {
-        while (true)
-        {            
-            Console.WriteLine("$ ");
-            var cmd = Console.ReadLine();
+        //while (true)
+        //{            
+        //    Console.WriteLine("$ ");
+        //    var cmd = Console.ReadLine();
 
-            if (cmd == "exit")
-            {
+        //    if (cmd == "exit")
+        //    {
+        //        return 0;
+        //    }
+        //    else
+        //    {
+        //        Console.ForegroundColor = ConsoleColor.Red;
+        //        Console.WriteLine($"{cmd}: command not found");
+        //        Console.ResetColor();
+        //    }
+        //}
+
+        while (true)
+        {
+            Console.Write("$ ");
+            var cmd = Console.ReadLine();
+            if (cmd == "exit 0")
                 return 0;
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{cmd}: command not found");
-                Console.ResetColor();
-            }
+            Console.WriteLine($"{cmd}: command not found");
         }
 
 
