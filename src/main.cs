@@ -8,29 +8,29 @@ class Program
 {
     static int Main()
     {
+
         while (true)
-        {
+        { 
             Console.Write("$ ");
             var cmd = Console.ReadLine();
 
-            if (cmd == "exit 0")
-            {
-                return 0;
-            }
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{cmd}: command not found");
-            Console.ResetColor();
-            
-        }
 
-        //while (true)
-        //{
-        //    Console.Write("$ ");
-        //    var cmd = Console.ReadLine();
-        //    if (cmd == "exit 0")
-        //        return 0;
-        //    Console.WriteLine($"{cmd}: command not found");
-        //}
+            switch (cmd)
+            {
+                case "echo":
+                    Utilities.Echo(cmd);
+                    break;
+                case "exit 0":
+                    return 0;
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{cmd}: command not found");
+                    Console.ResetColor();
+                    break;
+            }
+            
+
+        }
 
 
     }
