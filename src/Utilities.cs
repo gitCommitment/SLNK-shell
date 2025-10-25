@@ -15,6 +15,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
             if (input.Length > 1)
             {
                 Console.WriteLine(string.Join(" ", input.Skip(1)));
+                return;
             }
             Console.WriteLine("");
         }
