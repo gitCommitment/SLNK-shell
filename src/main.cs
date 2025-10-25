@@ -13,7 +13,7 @@ class Program
             Console.WriteLine("$ ");
             var cmd = Console.ReadLine();
 
-            if (cmd == "exit")
+            if (cmd == "exit 0")
             {
                 return 0;
             }
