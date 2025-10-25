@@ -18,17 +18,23 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
         {
             string? userInput = string.Empty;
             
-            while (userInput != "exit 0")
+            while (!Exit)
             {
                 
                 Console.Write("$ ");
                 userInput = Console.ReadLine();
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{userInput}: command not found");
-                Console.ResetColor();
+                if (userInput == "exit 0")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{userInput}: command not found");
+                    Console.ResetColor();
+                }
             }
 
-            Console.WriteLine("0");
         }
         
         
