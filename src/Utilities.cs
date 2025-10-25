@@ -37,7 +37,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{String.Join(" ", cmd)}: command not found");
+                    Console.WriteLine($"{String.Join(" ", cmd)}: not found");
                     Console.ResetColor();
                     break;
             }

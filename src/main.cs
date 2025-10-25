@@ -28,7 +28,7 @@ class Program
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{cmd}: not found");
+                    Console.WriteLine($"{cmd}: command not found");
                     Console.ResetColor();
                     break;
             }
