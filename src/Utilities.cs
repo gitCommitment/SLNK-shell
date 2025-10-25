@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
 
 namespace SLNK_Shell.codecrafters_shell_csharp.src
 {
@@ -36,7 +37,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{cmd}: command not found");
+                    Console.WriteLine($"{String.Join(" ", cmd)}: command not found");
                     Console.ResetColor();
                     break;
             }
