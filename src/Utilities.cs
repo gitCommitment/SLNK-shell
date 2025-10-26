@@ -59,6 +59,7 @@ namespace SLNK_Shell.codecrafters_shell_csharp.src
                     if(IsExecutable(fullPath, operatingSystem))
                     {
                         Console.WriteLine(fullPath);
+                        return;
                     } 
                     ;     //need to still check if its executable
 
